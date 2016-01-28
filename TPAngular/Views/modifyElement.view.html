@@ -1,0 +1,14 @@
+<form ng-controller="productController as container" ng-submit="container.modification(namePar, quantityPar)">
+    <h2 style="color:#80BFFF;">Modify an element</h2>
+
+    <div class="panel panel-primary" id="elem">
+        <br>Element Name:
+        <br><input type="text" ng-model="namePar" ng-init="namePar=SelectedItem.name" required="required"><br>
+        Username:
+        <br><input type="text" readonly placeholder="Test"><br>
+        Initial quantity:
+        <br><input type="number" min="0" ng-model="quantityPar" ng-init="quantityPar=SelectedItem.Quantity"><br><br>
+        <button type="submit" class="btn btn-primary" style="margin-bottom: 20px">Save</button>
+        <a href="#/stockManager"><button type="button" class="btn btn-primary" style="margin-bottom: 20px">Cancel</button></a>
+    </div>
+</form>

@@ -1,0 +1,18 @@
+<script type="text/javascript">
+
+</script>
+<h2 style="color:#80BFFF;">Add an element</h2>
+
+<form ng-controller="productController as container" ng-submit="container.addElement(product)">
+    <div class="panel panel-primary" id="elem">
+        <br>Element Name:
+        <br><input type="text" ng-model="product.name" required="required"><br>
+        Username:
+        <br><input type="text" readonly placeholder={{uname}}><br>
+        Initial quantity:
+        <br><input type="number" min="0" ng-model="product.Quantity" ng-init="product.Quantity = 0"><br><br>
+       <button type="submit" class="btn btn-primary">Add</button>
+        <a href="#/stockManager"><button type="button" class="btn btn-primary">Cancel</button></a>
+        <br><br>
+    </div>
+</form>

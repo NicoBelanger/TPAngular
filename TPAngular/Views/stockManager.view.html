@@ -1,0 +1,24 @@
+<h2 style="color:#80BFFF;">Stock manager</h2>
+
+<div ng-controller="productController as container">
+    <table align="center">
+        <tbody>
+        <tr ng-repeat="product in container.products"><td>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary" style="width: 200px" ng-click="SelectItem(product, 'req')">
+                    {{product.name}} | Qty: {{product.Quantity}}
+                </button>
+                <button type="button" class="btn btn-primary" ng-click="SelectItem(product, 'modif')">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </button>
+                <button type="button" class="btn btn-primary" ng-click="container.delete(product)">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </button>
+            </div>
+        </td></tr>
+        </tbody>
+    </table>
+</div>
+<a href="#/addElement"><button type="button" class="btn btn-primary btn-circle spacer">
+    <span class="glyphicon glyphicon-plus"></span>
+</button></a>

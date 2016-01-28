@@ -1,0 +1,14 @@
+<form ng-controller="productController as container" ng-submit="container.requisition(quantParam)">
+    <h2 style="color:#80BFFF;">{{SelectedItem.name}}</h2>
+
+    <div class="panel panel-primary" id="elem">
+        <br>Current quantity:
+        <br><input type="number" readonly placeholder={{SelectedItem.Quantity}}><br>
+        Name:
+        <br><input type="text" readonly placeholder={{uname}}><br>
+        Quantity:
+        <br><input type="number" min="1" max={{SelectedItem.Quantity}} ng-model="quantParam" ng-init="quantParam=1"><br><br>
+        <button type="submit" class="btn btn-primary" style="margin-bottom: 20px">Ok</button>
+        <a href="#/stockManager"><button type="button" class="btn btn-primary" style="margin-bottom: 20px">Cancel</button></a>
+    </div>
+</form>
